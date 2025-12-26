@@ -1,0 +1,22 @@
+{
+	"name": "@arcticnotes/keyframe-core",
+	"version": "0.0.1",
+	"description": "ArcticNotes Keyframe is a presentation tool. This project is the core model for it.",
+	"author": "Paul <paul@arcticnotes.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/arcticnotes/keyframe-core#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/arcticnotes/keyframe-core.git"
+	},
+	"bugs": {
+		"url": "https://github.com/arcticnotes/keyframe-core/issues"
+	},
+	"type": "module",
+	"exports": {
+		".": "./lib/index.js"
+	},
+	"files": [
+		"/lib/"
+	]
+}
