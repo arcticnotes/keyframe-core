@@ -1,0 +1,48 @@
+# The Syntax
+# ----------
+#
+# Lines starting with a "#", optionally with leading tabs (but not spaces), are ignored by the parser.
+#
+# When not in a token (for example, in a string), "# " in a line makes the rest of the line, including the "# ", ignored
+# by the parser. Notice the space following the "#", which is essential, because we specify RRGGBB colors with "#RRGGBB"
+# format.
+#
+# The hierarchy is indicated by tab-indentations (space-indentations are syntax errors).
+#
+# Extended types and properties have (Java-like) reverse domain name style prefixes. They must be aliased to
+# simple-names before used in the main text. These lines must be at the top of the file before defining any entity, view,
+# or transition.
+#
+#    enters := com.arcticnotes.keyframe.extension.enters-dramatically
+#    Computer := com.arcticnotes.keyframe.extension.Computer
+#
+# Following are some examples:
+#
+#    TODO
+
+Screen appears
+	width := 1506.08252815 # =24*72/sqrt(16^2+9^2)*16, so that the unit would be points on a 24" 16x9 monitor
+	height := 847.171422085 # =24*72/sqrt(16^2+9^2)*9
+	background := #ddccbb
+
+EntityPreset
+	width := 144 
+	height := 36
+	font-family := 'Noto Sans'
+	text-color := #334455
+
+text:EntityPreset
+	font-size := 16
+
+heading:EntityPreset[text]
+	fill-color := #ffcccc
+	font-size := 24
+
+TransitionPreset
+	duration @ 250ms
+
+slow:TransitionPreset
+	duration @ 2s
+
+heading1:Rectangle[heading] appears[slow] auto
+	text := 'Hello World!'
